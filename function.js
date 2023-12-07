@@ -314,7 +314,7 @@ evensAndOdds(100);
 
 
 //Q27.  Write a function which takes any number of arguments and return the sum of the arguments. 
-const sumAllNumber = (...num)=>{
+const sumAllNumber = (...num)=>{                            // // we used Rest parameter here (...num) :- Combined the numbers and store into array.
     let sum = 0;
      for(const x of num){
         sum += x;
