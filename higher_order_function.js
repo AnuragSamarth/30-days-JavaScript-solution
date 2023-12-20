@@ -1,4 +1,4 @@
-                                                             // Exercises: Level 1
+//                                                              // Exercises: Level 1
  const countries = ['Finland', 'Sweden', 'Denmark', 'Norway', 'Iceland'];
  const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -166,7 +166,7 @@ let totalPrice2 = products.reduce((sum, obj) => {
 console.log(totalPrice2);
 
 
-// // Q25.  Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
+// Q25.  Declare a function called categorizeCountries which returns an array of countries which have some common pattern(you find the countries array in this repository as countries.js(eg 'land', 'ia', 'island','stan')).
 const country = [
   {
     name: 'Afghanistan',
@@ -288,6 +288,7 @@ const country = [
     flag: 'https://restcountries.eu/data/aut.svg',
     currency: 'Euro'
   },]
+
 const categorizeCountries = (arr)=>{
           const countriesArray = arr.filter(({name})=> name.includes('land'));
           return countriesArray; 
@@ -346,4 +347,274 @@ const mostCommonInitial = countries.reduce((acc, curr) => {
   return acc;
 },{});
  const sortedInitials = Object.entries(mostCommonInitial).sort((a, b) => b[1] - a[1]);
- console.log(sortedInitials[0][0]); 
+ console.log(sortedInitials[0][0]);
+
+
+
+                                                             //  Exercises: Level 3
+// // Q29.  Use the countries information, in the data folder. Sort countries by name, by capital, by population. 
+const countries = [
+  {
+    name: 'Afghanistan',
+    capital: 'Kabul',
+    languages: ['Pashto', 'Uzbek', 'Turkmen'],
+    population: 27657145,
+    flag: 'https://restcountries.eu/data/afg.svg',
+    currency: 'Afghan afghani'
+  },
+  {
+    name: 'Cambodia',
+    capital: 'Phnom Penh',
+    languages: ['Khmer'],
+    population: 15626444,
+    flag: 'https://restcountries.eu/data/khm.svg',
+    currency: 'Cambodian riel'
+  },
+  {
+    name: 'Åland Islands',
+    capital: 'Mariehamn',
+    languages: ['Swedish'],
+    population: 28875,
+    flag: 'https://restcountries.eu/data/ala.svg',
+    currency: 'Euro'
+  },
+  {
+    name: 'Albania',
+    capital: 'Tirana',
+    languages: ['Albanian'],
+    population: 2886026,
+    flag: 'https://restcountries.eu/data/alb.svg',
+    currency: 'Albanian lek'
+  },
+  {
+    name: 'Algeria',
+    capital: 'Algiers',
+    languages: ['Arabic'],
+    population: 40400000,
+    flag: 'https://restcountries.eu/data/dza.svg',
+    currency: 'Algerian dinar'
+  },
+  {
+    name: 'American Samoa',
+    capital: 'Pago Pago',
+    languages: ['English', 'Samoan'],
+    population: 57100,
+    flag: 'https://restcountries.eu/data/asm.svg',
+    currency: 'United State Dollar'
+  },
+  {
+    name: 'Andorra',
+    capital: 'Andorra la Vella',
+    languages: ['Catalan'],
+    population: 78014,
+    flag: 'https://restcountries.eu/data/and.svg',
+    currency: 'Euro'
+  },
+  {
+    name: 'Angola',
+    capital: 'Luanda',
+    languages: ['Portuguese'],
+    population: 25868000,
+    flag: 'https://restcountries.eu/data/ago.svg',
+    currency: 'Angolan kwanza'
+  },
+{
+    name: 'Bahamas',
+    capital: 'Nassau',
+    languages: ['English'],
+    population: 378040,
+    flag: 'https://restcountries.eu/data/bhs.svg',
+    currency: 'Bahamian dollar'
+  },
+
+  {
+    name: 'Anguilla',
+    capital: 'The Valley',
+    languages: ['English'],
+    population: 13452,
+    flag: 'https://restcountries.eu/data/aia.svg',
+    currency: 'East Caribbean dollar'
+  },
+  {
+    name: 'Antarctica',
+    capital: '',
+    languages: ['English', 'Russian'],
+    population: 1000,
+    flag: 'https://restcountries.eu/data/ata.svg',
+    currency: 'Australian dollar'
+  },
+  {
+    name: 'Antigua and Barbuda',
+    capital: "Saint John's",
+    languages: ['English'],
+    population: 86295,
+    flag: 'https://restcountries.eu/data/atg.svg',
+    currency: 'East Caribbean dollar'
+  },
+]
+const nameSort = countries.sort((a,b)=>{
+  if(a.name < b.name) return -1;
+  if(a.name > b.name) return 1;
+});
+console.log(nameSort; 
+
+
+// // Q30.   Find the 10 most spoken languages:
+const countries = [
+  {
+    name: 'Afghanistan',
+    capital: 'Kabul',
+    languages: ['Pashto', 'Uzbek', 'Turkmen'],
+    population: 27657145,
+    flag: 'https://restcountries.eu/data/afg.svg',
+    currency: 'Afghan afghani'
+  },
+  {
+    name: 'Cambodia',
+    capital: 'Phnom Penh',
+    languages: ['Khmer'],
+    population: 15626444,
+    flag: 'https://restcountries.eu/data/khm.svg',
+    currency: 'Cambodian riel'
+  },
+  {
+    name: 'Åland Islands',
+    capital: 'Mariehamn',
+    languages: ['Swedish'],
+    population: 28875,
+    flag: 'https://restcountries.eu/data/ala.svg',
+    currency: 'Euro'
+  },
+  {
+    name: 'Albania',
+    capital: 'Tirana',
+    languages: ['Albanian'],
+    population: 2886026,
+    flag: 'https://restcountries.eu/data/alb.svg',
+    currency: 'Albanian lek'
+  },
+  {
+    name: 'Algeria',
+    capital: 'Algiers',
+    languages: ['Arabic'],
+    population: 40400000,
+    flag: 'https://restcountries.eu/data/dza.svg',
+    currency: 'Algerian dinar'
+  },
+  {
+    name: 'American Samoa',
+    capital: 'Pago Pago',
+    languages: ['English', 'Samoan'],
+    population: 57100,
+    flag: 'https://restcountries.eu/data/asm.svg',
+    currency: 'United State Dollar'
+  },
+  {
+    name: 'Andorra',
+    capital: 'Andorra la Vella',
+    languages: ['Catalan'],
+    population: 78014,
+    flag: 'https://restcountries.eu/data/and.svg',
+    currency: 'Euro'
+  },
+  {
+    name: 'Angola',
+    capital: 'Luanda',
+    languages: ['Portuguese'],
+    population: 25868000,
+    flag: 'https://restcountries.eu/data/ago.svg',
+    currency: 'Angolan kwanza'
+  },
+{
+    name: 'Bahamas',
+    capital: 'Nassau',
+    languages: ['English'],
+    population: 378040,
+    flag: 'https://restcountries.eu/data/bhs.svg',
+    currency: 'Bahamian dollar'
+  },
+
+  {
+    name: 'Anguilla',
+    capital: 'The Valley',
+    languages: ['English'],
+    population: 13452,
+    flag: 'https://restcountries.eu/data/aia.svg',
+    currency: 'East Caribbean dollar'
+  },
+  {
+    name: 'Antarctica',
+    capital: '',
+    languages: ['English', 'Russian'],
+    population: 1000,
+    flag: 'https://restcountries.eu/data/ata.svg',
+    currency: 'Australian dollar'
+  },
+  {
+    name: 'Antigua and Barbuda',
+    capital: "Saint John's",
+    languages: ['English'],
+    population: 86295,
+    flag: 'https://restcountries.eu/data/atg.svg',
+    currency: 'East Caribbean dollar'
+  },
+{
+    name: 'New Caledonia',
+    capital: 'Nouméa',
+    languages: ['French'],
+    population: 268767,
+    flag: 'https://restcountries.eu/data/ncl.svg',
+    currency: 'CFP franc'
+  },
+  {
+    name: 'New Zealand',
+    capital: 'Wellington',
+    languages: ['English', 'Māori'],
+    population: 4697854,
+    flag: 'https://restcountries.eu/data/nzl.svg',
+    currency: 'New Zealand dollar'
+  },
+  {
+    name: 'Nicaragua',
+    capital: 'Managua',
+    languages: ['Spanish'],
+    population: 6262703,
+    flag: 'https://restcountries.eu/data/nic.svg',
+    currency: 'Nicaraguan córdoba'
+  },
+  {
+    name: 'Niger',
+    capital: 'Niamey',
+    languages: ['French'],
+    population: 20715000,
+    flag: 'https://restcountries.eu/data/ner.svg',
+    currency: 'West African CFA franc'
+  },
+  {
+    name: 'Nigeria',
+    capital: 'Abuja',
+    languages: ['English'],
+    population: 186988000,
+    flag: 'https://restcountries.eu/data/nga.svg',
+    currency: 'Nigerian naira'
+  },
+]
+
+let mostSpoken = Object.entries(countries.reduce((langs, obj) => { obj.languages.forEach(x => langs.push(x));
+  return langs;
+}, []).reduce((dict, lang) => {
+  dict[lang] = (dict[lang] || 0) +1;
+  return dict;
+},{})).sort((a, b) => b[1]-a[1]);
+// mostSpoken.forEach(x => console.log(x));
+console.log(mostSpoken);
+
+
+// //Q31.   Use countries_data.js file create a function which create the ten most populated countries. 
+const populationCountries = (countries,num)=>{
+  const mostPopulated = countries.sort((a,b)=> b.population - a.population).slice(0,num);
+  return mostPopulated;
+};
+console.log(populationCountries(countries,10));
+
+
