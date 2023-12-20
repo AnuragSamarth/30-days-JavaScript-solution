@@ -456,7 +456,7 @@ const nameSort = countries.sort((a,b)=>{
   if(a.name < b.name) return -1;
   if(a.name > b.name) return 1;
 });
-console.log(nameSort; 
+console.log(nameSort); 
 
 
 // // Q30.   Find the 10 most spoken languages:
@@ -611,7 +611,7 @@ console.log(mostSpoken);
 
 
 // //Q31.   Use countries_data.js file create a function which create the ten most populated countries. 
-const populationCountries = (countries,num)=>{
+const populationCountries = (countries,num)=>{   
   const mostPopulated = countries.sort((a,b)=> b.population - a.population).slice(0,num);
   return mostPopulated;
 };
